@@ -252,7 +252,8 @@ def aplicar_modifiers_semanticos(
 ):
 
     texto = normalize(texto)
-
+    texto = re.sub(r'_x[0-9A-Fa-f]{4}_', ' ', texto)
+    texto = texto.replace("\x00", " ")
     tokens = texto.split()
 
     out = []
@@ -430,6 +431,9 @@ def token_ruim(t):
         return True
 
     if re.match(r"^RSCD$", t):
+        return True
+
+    if re.match(r'^[A-Z0-9\-\/]{5,}$', t):
         return True
 
     if NUMERO_REGEX.match(t):
