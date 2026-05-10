@@ -143,46 +143,6 @@ technical_short_tokens = set(
 )
 
 
-OEM_SET = set([
-
-    normalize_key.upper()
-
-    for normalize_key in oem_cfg.keys()
-])
-
-COMPOUND_NOUNS = {
-
-    tuple(normalize(k).split()):
-        normalize(k).replace(" ", "_")
-
-    for k in compound_nouns_cfg.keys()
-}
-
-COMPOUND_NOUNS.update({
-    ("O", "RING"): "O-RING",
-    ("BLADDER", "KIT"): "BLADDER_KIT"
-})
-
-MAX_COMPOUND = max(
-    (len(k) for k in COMPOUND_NOUNS),
-    default=2
-)
-
-LEXICOS_BLOQUEADOS = (
-    blocked_nouns
-    | material_words
-    | norma_words
-    | cores
-    | dimensional_words
-    | measurement_words
-    | attribute_words
-    | documental_words
-    | protecao_words
-    | propulsao_words
-    | technical_short_tokens
-    | OEM_SET
-)
-
 
 # =========================================================
 # EMBEDDING
@@ -290,6 +250,48 @@ def normalize(txt):
     )
 
     return txt.strip()
+
+
+# Definitions that depend on normalize()
+OEM_SET = set([
+
+    normalize_key.upper()
+
+    for normalize_key in oem_cfg.keys()
+])
+
+COMPOUND_NOUNS = {
+
+    tuple(normalize(k).split()):
+        normalize(k).replace(" ", "_")
+
+    for k in compound_nouns_cfg.keys()
+}
+
+COMPOUND_NOUNS.update({
+    ("O", "RING"): "O-RING",
+    ("BLADDER", "KIT"): "BLADDER_KIT"
+})
+
+MAX_COMPOUND = max(
+    (len(k) for k in COMPOUND_NOUNS),
+    default=2
+)
+
+LEXICOS_BLOQUEADOS = (
+    blocked_nouns
+    | material_words
+    | norma_words
+    | cores
+    | dimensional_words
+    | measurement_words
+    | attribute_words
+    | documental_words
+    | protecao_words
+    | propulsao_words
+    | technical_short_tokens
+    | OEM_SET
+)
 
 
 # =========================================================
