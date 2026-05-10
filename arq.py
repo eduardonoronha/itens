@@ -80,6 +80,10 @@ synonyms = load_json(
     "synonyms.json"
 )
 
+compound_nouns_cfg = load_json(
+    "compound_nouns.json"
+)
+
 oem_cfg = load_json(
     "oem.json"
 )
@@ -458,23 +462,21 @@ def tokenize(texto):
 
         compound_nouns = {
 
-            ("O", "RING"): "O-RING",
+            tuple(normalize(k).split()):
+                normalize(k).replace(" ", "_")
 
-            ("BALL", "VALVE"):
-                "BALL_VALVE",
-
-            ("ROLLER", "BEARING"):
-                "ROLLER_BEARING",
-
-            ("AIR", "FILTER"):
-                "AIR_FILTER",
-
-            ("OIL", "FILTER"):
-                "OIL_FILTER",
-
-            ("BLADDER", "KIT"):
-                "BLADDER_KIT"
+            for k in compound_nouns_cfg.keys()
         }
+
+        compound_nouns.update({
+            ("O", "RING"): "O-RING",
+            ("BLADDER", "KIT"): "BLADDER_KIT"
+        })
+
+        max_compound = max(
+            (len(k) for k in compound_nouns),
+            default=2
+        )
 
         i = 0
 
@@ -482,23 +484,22 @@ def tokenize(texto):
 
             matched = False
 
-            if i + 1 < len(tokens):
+            for n in range(
+                min(max_compound, len(tokens) - i),
+                1,
+                -1
+            ):
 
-                pair = (
+                gram = tuple(tokens[i:i+n])
 
-                    tokens[i],
-                    tokens[i + 1]
-                )
+                if gram in compound_nouns:
 
-                if pair in compound_nouns:
+                    out.append(compound_nouns[gram])
 
-                    out.append(
-                        compound_nouns[pair]
-                    )
-
-                    i += 2
+                    i += n
 
                     matched = True
+                    break
 
             if matched:
                 continue
