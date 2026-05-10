@@ -16,6 +16,7 @@ import pandas as pd
 
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from utils import normalize, remover_acentos
 
 
 # =========================================================
@@ -179,77 +180,6 @@ ANGULO_REGEX = re.compile(
 CODIGO_REGEX = re.compile(
     r"^[A-Z0-9./_-]{8,}$"
 )
-
-
-# =========================================================
-# NORMALIZE
-# =========================================================
-
-def remover_acentos(txt):
-
-    txt = unicodedata.normalize(
-        "NFKD",
-        txt
-    )
-
-    return "".join(
-
-        c for c in txt
-
-        if not unicodedata.combining(c)
-    )
-
-
-def normalize(txt):
-
-    if txt is None:
-        return ""
-
-    txt = str(txt)
-
-    txt = remover_acentos(txt)
-
-    txt = txt.upper()
-
-    txt = txt.replace(
-        "_X0000_",
-        " "
-    )
-
-    txt = txt.replace(
-        "X0000",
-        " "
-    )
-
-    txt = txt.replace(
-        "ACOO",
-        "ACO"
-    )
-
-    txt = txt.replace(
-        "INOXX",
-        "INOX"
-    )
-
-    txt = re.sub(
-        r"(\d),(\d)",
-        r"\1.\2",
-        txt
-    )
-
-    txt = re.sub(
-        r"[^A-Z0-9./%+\-_]+",
-        " ",
-        txt
-    )
-
-    txt = re.sub(
-        r"\s+",
-        " ",
-        txt
-    )
-
-    return txt.strip()
 
 
 # Definitions that depend on normalize()
