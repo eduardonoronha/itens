@@ -1,0 +1,13 @@
+[
+  "FLOW",
+  "PRESSURE",
+  "TEMPERATURE",
+  "LEVEL",
+  "VOLTAGE",
+  "CURRENT",
+  "POWER",
+  "FREQUENCY",
+  "TORQUE",
+  "RPM",
+  "SPEED"
+]

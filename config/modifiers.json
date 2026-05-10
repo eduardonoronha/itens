@@ -1,0 +1,183 @@
+{
+  "VALVE": {
+    "BALL": "VALVULA ESFERA",
+    "CHECK": "VALVULA RETENCAO",
+    "RELIEF": "VALVULA ALIVIO",
+    "SOLENOID": "VALVULA SOLENOIDE",
+    "HYDRAULIC": "VALVULA HIDRAULICA",
+    "NEEDLE": "VALVULA AGULHA",
+    "GLOBE": "VALVULA GLOBO"
+  },
+
+  "FILTER": {
+    "AIR": "FILTRO AR",
+    "OIL": "FILTRO OLEO",
+    "HYDRAULIC": "FILTRO HIDRAULICO",
+    "FUEL": "FILTRO COMBUSTIVEL",
+    "SUCTION": "FILTRO SUCCAO",
+    "FILTRANTE": "ELEMENTO FILTRANTE"
+  },
+
+  "BEARING": {
+    "BALL": "ROLAMENTO ESFERICO",
+    "ROLLER": "ROLAMENTO ROLETES",
+    "NEEDLE": "ROLAMENTO AGULHA",
+    "AXIAL": "ROLAMENTO AXIAL"
+  },
+
+  "SEAL": {
+    "MECHANICAL": "SELO MECANICO",
+    "SHAFT": "SELO EIXO",
+    "O-RING": "O-RING"
+  },
+
+  "PUMP": {
+    "CENTRIFUGAL": "BOMBA CENTRIFUGA",
+    "HYDRAULIC": "BOMBA HIDRAULICA",
+    "GEAR": "BOMBA ENGRENAGEM"
+  },
+
+  "MOTOR": {
+    "DIESEL": "MOTOR DIESEL",
+    "ELECTRIC": "MOTOR ELETRICO",
+    "HYDRAULIC": "MOTOR HIDRAULICO"
+  },
+
+  "ACO": {
+    "CARBONO": "ACO CARBONO",
+    "INOX": "ACO INOX",
+    "FORJADO": "ACO FORJADO",
+    "CROMO": "ACO CROMO",
+    "ASTM": "ACO ASTM"
+  },
+
+  "CROMO": {
+    "VANADIO": "ACO CROMO VANADIO"
+  },
+
+  "ASTM": {
+    "A36": "ASTM A36"
+  },
+
+  "BARRA": {
+    "CHATA": "BARRA CHATA",
+    "SECAO": "BARRA SECAO"
+  },
+
+  "SOQUETE": {
+    "PROFUNDO": "SOQUETE PROFUNDO",
+    "CURTO": "SOQUETE CURTO"
+  },
+
+  "CHAVE": {
+    "IMPACTO": "CHAVE IMPACTO",
+    "FENDA": "CHAVE FENDA",
+    "PHILLIPS": "CHAVE PHILLIPS"
+  },
+
+  "FORMATO": {
+    "RETANGULAR": "FORMATO RETANGULAR",
+    "SEXTAVADO": "FORMATO SEXTAVADO",
+    "QUADRADO": "FORMATO QUADRADO",
+    "REDONDO": "FORMATO REDONDO"
+  },
+
+  "GRAU": {
+    "PROTECAO": "GRAU PROTECAO"
+  },
+
+  "EXTREMIDADE": {
+    "FEMEA": "EXTREMIDADE FEMEA",
+    "MACHO": "EXTREMIDADE MACHO",
+    "ROSCADA": "EXTREMIDADE ROSCADA"
+  },
+
+  "ASPECTO": {
+    "FISICO": "ASPECTO FISICO"
+  },
+
+  "SECAO": {
+    "CHATA": "SECAO CHATA",
+    "CIRCULAR": "SECAO CIRCULAR",
+    "QUADRADA": "SECAO QUADRADA"
+  },
+
+  "LAMPADA": {
+    "LED": "LAMPADA LED"
+  },
+
+  "ELEMENTO": {
+    "FILTRANTE": "ELEMENTO FILTRANTE"
+  },
+
+  "POLICLORETO": {
+    "VINILA": "PVC"
+  },
+
+  "ODOR": {
+    "CARACTERISTICO": "ODOR CARACTERISTICO"
+  },
+
+  "MATERIAL": [
+    "ACO",
+    "INOX",
+    "LATÃO",
+    "STAINLESS",
+    "STEEL",
+    "CARBONO",
+    "FORJADO",
+    "ALUMINIO",
+    "FERRO",
+    "CROMO",
+    "VANADIO"
+  ],
+
+  "PROPULSAO": [
+    "TUNNEL",
+    "THRUSTER",
+    "PROPULSOR",
+    "AZIMUTH"
+  ],
+
+  "COR": [
+    "PRETA",
+    "VERMELHA",
+    "VERDE",
+    "BRANCA",
+    "INCOLOR",
+    "AMARELA"
+  ],
+
+  "TENSAO": [
+    "NOMINAL",
+    "ALIMENTACAO"
+  ],
+
+  "DIMENSIONAL": [
+    "LARGURA",
+    "ALTURA",
+    "COMPRIMENTO",
+    "ESPESSURA",
+    "DIAM",
+    "DIAMETRO",
+    "ROSCA"
+  ],
+
+  "PROTECAO": [
+    "IP52",
+    "IP55",
+    "IP56",
+    "IP65",
+    "IP67",
+    "IP69"
+  ],
+
+  "NORMA": [
+    "ASTM",
+    "SAE",
+    "DIN",
+    "ANSI",
+    "ABNT",
+    "ISO"
+  ]
+}

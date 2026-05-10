@@ -1,0 +1,27 @@
+{
+  "KONGSBERG": [
+    "KPOS",
+    "K-POS",
+    "KCHIEF",
+    "AUTOPILOT"
+  ],
+
+  "BERGEN": [
+    "ROLLS ROYCE BERGEN",
+    "BERGEN ENGINE"
+  ],
+
+  "SMST": [
+    "SMST CRANE",
+    "SMST OFFSHORE"
+  ],
+
+  "PARKER": [
+    "PARKER HANNIFIN"
+  ],
+
+  "CUMMINS": [
+    "ONAN",
+    "FLEETGUARD"
+  ]
+}

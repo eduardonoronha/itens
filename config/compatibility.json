@@ -1,0 +1,51 @@
+{
+  "ACCUMULATOR": {
+    "category": "ACUMULADOR",
+    "subcategory": "ACUMULADOR HIDRAULICO",
+    "compatible_with": [
+      "PARKER",
+      "HYDAC",
+      "REXROTH"
+    ]
+  },
+
+  "ACTUATOR": {
+    "category": "ATUADOR",
+    "subcategory": "ATUADOR",
+    "compatible_with": [
+      "WOODWARD",
+      "ROTORK",
+      "AUMA"
+    ]
+  },
+
+  "AIR FILTER": {
+    "category": "FILTRAGEM",
+    "subcategory": "FILTRO AR",
+    "compatible_with": [
+      "FLEETGUARD",
+      "DONALDSON",
+      "MANN"
+    ]
+  },
+
+  "O-RING": {
+    "category": "VEDACAO",
+    "subcategory": "O-RING",
+    "compatible_with": [
+      "PARKER",
+      "SKF",
+      "TRELLEBORG"
+    ]
+  },
+
+  "VALVE": {
+    "category": "VALVULA",
+    "subcategory": "VALVULA",
+    "compatible_with": [
+      "AVENTICS",
+      "PARKER",
+      "ASCO"
+    ]
+  }
+}
