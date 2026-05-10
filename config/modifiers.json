@@ -8,7 +8,6 @@
     "NEEDLE": "VALVULA AGULHA",
     "GLOBE": "VALVULA GLOBO"
   },
-
   "FILTER": {
     "AIR": "FILTRO AR",
     "OIL": "FILTRO OLEO",
@@ -17,32 +16,27 @@
     "SUCTION": "FILTRO SUCCAO",
     "FILTRANTE": "ELEMENTO FILTRANTE"
   },
-
   "BEARING": {
     "BALL": "ROLAMENTO ESFERICO",
     "ROLLER": "ROLAMENTO ROLETES",
     "NEEDLE": "ROLAMENTO AGULHA",
     "AXIAL": "ROLAMENTO AXIAL"
   },
-
   "SEAL": {
     "MECHANICAL": "SELO MECANICO",
     "SHAFT": "SELO EIXO",
     "O-RING": "O-RING"
   },
-
   "PUMP": {
     "CENTRIFUGAL": "BOMBA CENTRIFUGA",
     "HYDRAULIC": "BOMBA HIDRAULICA",
     "GEAR": "BOMBA ENGRENAGEM"
   },
-
   "MOTOR": {
     "DIESEL": "MOTOR DIESEL",
     "ELECTRIC": "MOTOR ELETRICO",
     "HYDRAULIC": "MOTOR HIDRAULICO"
   },
-
   "ACO": {
     "CARBONO": "ACO CARBONO",
     "INOX": "ACO INOX",
@@ -50,74 +44,59 @@
     "CROMO": "ACO CROMO",
     "ASTM": "ACO ASTM"
   },
-
   "CROMO": {
     "VANADIO": "ACO CROMO VANADIO"
   },
-
   "ASTM": {
     "A36": "ASTM A36"
   },
-
   "BARRA": {
     "CHATA": "BARRA CHATA",
     "SECAO": "BARRA SECAO"
   },
-
   "SOQUETE": {
     "PROFUNDO": "SOQUETE PROFUNDO",
     "CURTO": "SOQUETE CURTO"
   },
-
   "CHAVE": {
     "IMPACTO": "CHAVE IMPACTO",
     "FENDA": "CHAVE FENDA",
     "PHILLIPS": "CHAVE PHILLIPS"
   },
-
   "FORMATO": {
     "RETANGULAR": "FORMATO RETANGULAR",
     "SEXTAVADO": "FORMATO SEXTAVADO",
     "QUADRADO": "FORMATO QUADRADO",
     "REDONDO": "FORMATO REDONDO"
   },
-
   "GRAU": {
     "PROTECAO": "GRAU PROTECAO"
   },
-
   "EXTREMIDADE": {
     "FEMEA": "EXTREMIDADE FEMEA",
     "MACHO": "EXTREMIDADE MACHO",
     "ROSCADA": "EXTREMIDADE ROSCADA"
   },
-
   "ASPECTO": {
     "FISICO": "ASPECTO FISICO"
   },
-
   "SECAO": {
     "CHATA": "SECAO CHATA",
     "CIRCULAR": "SECAO CIRCULAR",
     "QUADRADA": "SECAO QUADRADA"
   },
-
   "LAMPADA": {
     "LED": "LAMPADA LED"
   },
-
   "ELEMENTO": {
     "FILTRANTE": "ELEMENTO FILTRANTE"
   },
-
   "POLICLORETO": {
     "VINILA": "PVC"
   },
-
   "ODOR": {
     "CARACTERISTICO": "ODOR CARACTERISTICO"
   },
-
   "MATERIAL": [
     "ACO",
     "INOX",
@@ -131,14 +110,12 @@
     "CROMO",
     "VANADIO"
   ],
-
   "PROPULSAO": [
     "TUNNEL",
     "THRUSTER",
     "PROPULSOR",
     "AZIMUTH"
   ],
-
   "COR": [
     "PRETA",
     "VERMELHA",
@@ -147,12 +124,10 @@
     "INCOLOR",
     "AMARELA"
   ],
-
   "TENSAO": [
     "NOMINAL",
     "ALIMENTACAO"
   ],
-
   "DIMENSIONAL": [
     "LARGURA",
     "ALTURA",
@@ -162,7 +137,6 @@
     "DIAMETRO",
     "ROSCA"
   ],
-
   "PROTECAO": [
     "IP52",
     "IP55",
@@ -171,7 +145,6 @@
     "IP67",
     "IP69"
   ],
-
   "NORMA": [
     "ASTM",
     "SAE",
@@ -179,5 +152,77 @@
     "ANSI",
     "ABNT",
     "ISO"
-  ]
+  ],
+  "MAIN": {
+    "MOTOR": "MOTOR PRINCIPAL",
+    "ENGINE": "MOTOR PRINCIPAL"
+  },
+  "ENGATE": {
+    "RAPIDO": "ENGATE RAPIDO"
+  },
+  "PONTO": {
+    "FULGOR": "PONTO FULGOR"
+  },
+  "ALFA": {
+    "LAVAL": "ALFA LAVAL"
+  },
+  "TURCO": {
+    "BOTE": "TURCO BOTE",
+    "BOTE RESGATE": "TURCO BOTE RESGATE"
+  },
+  "BOTE": {
+    "RESGATE": "BOTE RESGATE"
+  },
+  "SPARE": {
+    "PART": "SPARE PART",
+    "PARTS": "SPARE PARTS",
+    "PART LIST": "SPARE PART LIST"
+  },
+  "PART": {
+    "LIST": "PART LIST"
+  },
+  "DECK": {
+    "CRANE": "DECK CRANE"
+  },
+  "LOWER": {
+    "GEAR": "LOWER GEAR",
+    "GEAR MODULE": "LOWER GEAR MODULE"
+  },
+  "GEAR": {
+    "MODULE": "GEAR MODULE"
+  },
+  "SOCKET": {
+    "HEAD": "SOCKET HEAD"
+  },
+  "FITA": {
+    "ADESIVA": "FITA ADESIVA"
+  },
+  "FIBRA": {
+    "VIDRO": "FIBRA VIDRO"
+  },
+  "BOMBA": {
+    "AGUA": "BOMBA AGUA"
+  },
+  "FUEL": {
+    "OIL": "FUEL OIL"
+  },
+  "CARTA": {
+    "NAUTICA": "CARTA NAUTICA"
+  },
+  "ARRUELA": {
+    "LISA": "ARRUELA LISA"
+  },
+  "FAIXA": {
+    "MEDICAO": "FAIXA MEDICAO"
+  },
+  "METRICA": {
+    "PASSO": "ROSCA METRICA PASSO"
+  },
+  "CONTATO": {
+    "1NA": "CONTATO 1NA",
+    "1NF": "CONTATO 1NF"
+  },
+  "1NA": {
+    "1NF": "CONTATO 1NA 1NF"
+  }
 }
