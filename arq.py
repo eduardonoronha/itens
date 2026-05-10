@@ -373,43 +373,42 @@ def token_ruim(t):
     if not t:
         return True
 
-    if t in blocked_nouns:
+    partes = [x for x in re.split(r"[ _-]+", t) if x]
+
+    lexicos_bloqueados = (
+        blocked_nouns
+        | material_words
+        | norma_words
+        | cores
+        | dimensional_words
+        | measurement_words
+        | attribute_words
+        | documental_words
+        | protecao_words
+        | propulsao_words
+        | technical_short_tokens
+        | OEM_SET
+    )
+
+    if t in lexicos_bloqueados:
         return True
 
-    if t in material_words:
-        return True
-
-    if t in norma_words:
-        return True
-
-    if t in cores:
-        return True
-
-    if t in dimensional_words:
-        return True
-
-    if t in measurement_words:
-        return True
-
-    if t in attribute_words:
-        return True
-
-    if t in documental_words:
-        return True
-
-    if t in protecao_words:
-        return True
-
-    if t in propulsao_words:
-        return True
-
-    if t in technical_short_tokens:
-        return True
-
-    if t in OEM_SET:
+    if any(parte in lexicos_bloqueados for parte in partes):
         return True
 
     if re.match(r"^CAT\d", t):
+        return True
+
+    if re.match(r"^[MT]\d{1,3}$", t):
+        return True
+
+    if re.match(r"^CAS$", t):
+        return True
+
+    if re.match(r"^EXT[A-Z]$", t):
+        return True
+
+    if re.match(r"^RSCD$", t):
         return True
 
     if NUMERO_REGEX.match(t):
