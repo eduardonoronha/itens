@@ -150,6 +150,39 @@ OEM_SET = set([
     for normalize_key in oem_cfg.keys()
 ])
 
+COMPOUND_NOUNS = {
+
+    tuple(normalize(k).split()):
+        normalize(k).replace(" ", "_")
+
+    for k in compound_nouns_cfg.keys()
+}
+
+COMPOUND_NOUNS.update({
+    ("O", "RING"): "O-RING",
+    ("BLADDER", "KIT"): "BLADDER_KIT"
+})
+
+MAX_COMPOUND = max(
+    (len(k) for k in COMPOUND_NOUNS),
+    default=2
+)
+
+LEXICOS_BLOQUEADOS = (
+    blocked_nouns
+    | material_words
+    | norma_words
+    | cores
+    | dimensional_words
+    | measurement_words
+    | attribute_words
+    | documental_words
+    | protecao_words
+    | propulsao_words
+    | technical_short_tokens
+    | OEM_SET
+)
+
 
 # =========================================================
 # EMBEDDING
@@ -375,25 +408,10 @@ def token_ruim(t):
 
     partes = [x for x in re.split(r"[ _-]+", t) if x]
 
-    lexicos_bloqueados = (
-        blocked_nouns
-        | material_words
-        | norma_words
-        | cores
-        | dimensional_words
-        | measurement_words
-        | attribute_words
-        | documental_words
-        | protecao_words
-        | propulsao_words
-        | technical_short_tokens
-        | OEM_SET
-    )
-
-    if t in lexicos_bloqueados:
+    if t in LEXICOS_BLOQUEADOS:
         return True
 
-    if any(parte in lexicos_bloqueados for parte in partes):
+    if any(parte in LEXICOS_BLOQUEADOS for parte in partes):
         return True
 
     if re.match(r"^CAT\d", t):
@@ -459,24 +477,6 @@ def tokenize(texto):
 
         out = []
 
-        compound_nouns = {
-
-            tuple(normalize(k).split()):
-                normalize(k).replace(" ", "_")
-
-            for k in compound_nouns_cfg.keys()
-        }
-
-        compound_nouns.update({
-            ("O", "RING"): "O-RING",
-            ("BLADDER", "KIT"): "BLADDER_KIT"
-        })
-
-        max_compound = max(
-            (len(k) for k in compound_nouns),
-            default=2
-        )
-
         i = 0
 
         while i < len(tokens):
@@ -484,16 +484,16 @@ def tokenize(texto):
             matched = False
 
             for n in range(
-                min(max_compound, len(tokens) - i),
+                min(MAX_COMPOUND, len(tokens) - i),
                 1,
                 -1
             ):
 
                 gram = tuple(tokens[i:i+n])
 
-                if gram in compound_nouns:
+                if gram in COMPOUND_NOUNS:
 
-                    out.append(compound_nouns[gram])
+                    out.append(COMPOUND_NOUNS[gram])
 
                     i += n
 

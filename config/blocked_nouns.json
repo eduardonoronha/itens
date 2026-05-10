@@ -57,5 +57,19 @@
   "CABECA",
   "R2",
   "TUBO",
-  "JUNTA"
+  "JUNTA",
+  "NOMINAL",
+  "NUMERO",
+  "TAMANHO",
+  "FORMATO",
+  "CARGA",
+  "INTERNO",
+  "EXTERNO",
+  "BASE",
+  "SISTEMA",
+  "ALT",
+  "N/A",
+  "NA",
+  "CA",
+  "C/"
 ]
