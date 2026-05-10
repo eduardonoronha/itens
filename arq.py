@@ -399,6 +399,77 @@ def aplicar_modifiers_semanticos(
     return " ".join(out)
 
 
+
+
+def distancia_edicao_limite_um(a, b):
+
+    if a == b:
+        return 0
+
+    la = len(a)
+    lb = len(b)
+
+    if abs(la - lb) > 1:
+        return 2
+
+    i = j = erros = 0
+
+    while i < la and j < lb:
+
+        if a[i] == b[j]:
+            i += 1
+            j += 1
+            continue
+
+        erros += 1
+
+        if erros > 1:
+            return 2
+
+        if la > lb:
+            i += 1
+        elif lb > la:
+            j += 1
+        else:
+            i += 1
+            j += 1
+
+    if i < la or j < lb:
+        erros += 1
+
+    return erros
+
+
+def corrigir_token_ocr_atributo(token):
+
+    if not token:
+        return token
+
+    if token in attribute_words:
+        return token
+
+    if len(token) < 5:
+        return token
+
+    if not re.fullmatch(r"[A-Z-]+", token):
+        return token
+
+    if token in LEXICOS_BLOQUEADOS:
+        return token
+
+    melhor = token
+
+    for candidato in attribute_words:
+
+        if abs(len(candidato) - len(token)) > 1:
+            continue
+
+        if distancia_edicao_limite_um(token, candidato) <= 1:
+            melhor = candidato
+            break
+
+    return melhor
+
 # =========================================================
 # TOKEN INVALIDO
 # =========================================================
@@ -510,6 +581,10 @@ def tokenize(texto):
             t = t.replace(
                 "_",
                 " "
+            )
+
+            t = corrigir_token_ocr_atributo(
+                t
             )
 
             if len(t) <= 1:
